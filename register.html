@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/logreg_style.css">
+    <title>Regisztráció</title>
+</head>
+<body>
+    <div class="login box" id="LoginDiv">
+      <div class="login-header">
+          <header>Regisztráció</header>
+      </div>
+      <form id="LoginForm">
+      <div class="input-box">
+          <input type="text" class="input-field" id="VezNev" name="VezNev" placeholder="Vezeteknev" autocomplete="off" required>
+      </div>
+      <div class="input-box">
+          <input type="text" class="input-field" id="KerNev" name="KerNev" placeholder="Keresztnev" autocomplete="off" required>
+      </div>
+      <div class="input-box">
+          <input type="email" class="input-field" id="Email" name="Email" placeholder="Email" autocomplete="off" required>
+      </div>
+      <div class="input-box">
+          <input type="password" class="input-field" id="Password" name="Password" placeholder="Jelszo" autocomplete="off" required>
+      </div>
+      <div class="input-box">
+        <input type="password" class="input-field" id="Password2" name="Password2" placeholder="Jelszo ujra" autocomplete="off" required>
+    </div>
+      <!--<span id="BadPwd"></span>-->
+      <div class="input-box">
+        <input type="text" class="input-field" id="Location" name="Location" placeholder="Lakcim" autocomplete="off" required>
+      </div>
+    </form>
+      <div class="input-submit">
+          <button class="submit-btn" id ="submit" onclick="AccountCreate();"></button></a></button>
+          <label for="submit">Regisztráció</a></label>
+      </div>
+    </div>
+
+    <script>
+      function AccountCreate() {
+
+        let Pwd1 = document.getElementById('Password').value;
+        let Pwd2 = document.getElementById('Password2').value;
+        if(Pwd1 != Pwd2) document.getElementById('BadPwd').innerHTML="ELTERO JELSZO";
+        else{
+        const logindiv = document.getElementById("LoginForm");
+        const DivData = {
+          vasarloId: getId,
+          vasarloNev: logindiv.VezNev.value+" "+logindiv.KerNev.value,
+          vasarloMail: logindiv.Email.value,
+          vasarloJelszo: logindiv.Password.value,
+          vasarloCim: logindiv.Location.value,
+        };
+        console.log(JSON.stringify(DivData));
+	      const xmlhttp = new XMLHttpRequest();
+
+	      xmlhttp.onreadystatechange = function(){
+        if(xmlhttp.readyState==4 && xmlhttp.status==200){
+			    console.log("Sikeres POST keres!");
+		    } else if(xmlhttp.readyState==4){
+			    console.log("Hiba a POST keres soran: "+xmlhttp.status);
+		    }
+	    };
+      xmlhttp.open("POST","https://localhost:7032/api/cafeum/vasarlok", true);
+      xmlhttp.setRequestHeader("Content-Type","application/json");
+
+      xmlhttp.send(JSON.stringify(DivData));
+
+      location.assign("index.html");
+      //  alert("Sikeres regisztracio");
+    }
+    }
+    let getId=0;
+    window.onload = function () {
+      const xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function(){
+        if(this.readyState==4 && this.status==200){
+          const objektum = JSON.parse(this.responseText);
+          console.log(objektum);
+
+          for(let i=0;i<objektum.length;i++){
+            if(objektum[i].vasarloId>getId){
+              getId=objektum[i].vasarloId;
+            }
+          }
+          getId++;
+          //alert(getId);
+        }
+      }
+
+      xmlhttp.open("GET","https://localhost:7032/api/cafeum/vasarlok",true);
+      xmlhttp.send();
+    }
+    </script>
+</body>
+</html>

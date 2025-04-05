@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/logreg_style.css">
+    <title>Bejelentkezés</title>
+</head>
+<body>
+    <div class="login box">
+        <div class="login-header">
+            <header>Bejelentkezés</header>
+        </div>
+        <div class="input-box">
+            <input type="email" class="input-field" id ="Email" placeholder="Email" autocomplete="off" required>
+        </div>
+        <div class="input-box">
+            <input type="password" class="input-field" id ="Password" placeholder="Jelszo" autocomplete="off" required>
+        </div>
+        <span id="BadCode"></span>
+        <div class="input-submit">
+            <button class="submit-btn" id ="submit" onclick="AccountCheck();"></button></button>
+            <label for="submit">Bejelentkezés</label>
+        </div>
+        <div class="sign-up-link">
+            <p>Nincs fiókod? <a href="register.html">Regisztráció</p>
+        </div>
+    </div>
+    <script>
+      /*
+        function func()
+        {
+            var email = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if(email == 'admin' && password == '123')
+        {
+            alert("csocso");
+            window.location.assign("index.html");
+        }
+        else{
+            alert("nahhh");
+        }
+        }
+        */
+
+        function AccountCheck() {
+          let Mail = document.getElementById('Email').value;
+          let Pwd = document.getElementById('Password').value;
+          let talalt=false;
+          let MailIndex=0;
+
+          const xmlhttp = new XMLHttpRequest();
+          xmlhttp.onreadystatechange = function () {
+            if(this.readyState==4 && this.status==200){
+              const object = JSON.parse(this.responseText);
+              console.log(object);
+              for(let i=0;i<object.length;i++){
+                if(Mail==object[i].vasarloMail){
+                  talalt=true;
+                  MailIndex=i;
+                  break;
+                }
+                else talalt=false;
+              }
+              if(talalt){
+                if(Mail == object[MailIndex].vasarloMail && Pwd == object[MailIndex].vasarloJelszo){
+                  //alert("csocso");
+                  location.assign("index.html");
+                } else {
+                  //document.getElementById('BadCode').innerHTML="Hibas email vagy jelszo!";
+                  alert("Hibas email vagy jelszo!");
+                }
+              } else {
+                //document.getElementById('BadCode').innerHTML="Fiok nem letezik!";
+                alert("Fiok nem letezik!");
+              }
+            }
+          }
+          xmlhttp.open("GET","https://localhost:7032/api/cafeum/vasarlok",true);
+          xmlhttp.send();
+        }
+    </script>
+
+
+</body>
+</html>
