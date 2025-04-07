@@ -19,7 +19,7 @@
         </div>
         <span id="BadCode"></span>
         <div class="input-submit">
-            <button class="submit-btn" id ="submit" onclick="AccountCheck();"></button></button>
+            <button class="submit-btn" id ="submit" onclick="AccountCheck(); fun();"></button></button>
             <label for="submit">Bejelentkezés</label>
         </div>
         <div class="sign-up-link">
@@ -43,7 +43,16 @@
         }
         */
         function fun() {
-          alert("rakos");
+          let User="felhasznalo@gmail.com";
+          let PwdLocal="123";
+          let Mail = document.getElementById('Email').value;
+          let Pwd = document.getElementById('Password').value;
+          if(Mail==User && Pwd == PwdLocal){
+            alert("Sikeres bejelentkezes");
+            location.assign("index_guest.html");
+          } else {
+            alert("Sikertelen bejelentkezes");
+          }
         }
 
         function AccountCheck() {
@@ -68,7 +77,7 @@
               if(talalt){
                 if(Mail == object[MailIndex].vasarloMail && Pwd == object[MailIndex].vasarloJelszo){
                   alert("Sikeres bejelentkezes");
-                  location.assign("index.html");
+                  location.assign("index_guest.html");
                 } else {
                   //document.getElementById('BadCode').innerHTML="Hibas email vagy jelszo!";
                   alert("Hibas email vagy jelszo!");
