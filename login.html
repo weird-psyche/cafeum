@@ -42,6 +42,9 @@
         }
         }
         */
+        function fun() {
+          alert("rakos");
+        }
 
         function AccountCheck() {
           let Mail = document.getElementById('Email').value;
@@ -64,7 +67,7 @@
               }
               if(talalt){
                 if(Mail == object[MailIndex].vasarloMail && Pwd == object[MailIndex].vasarloJelszo){
-                  //alert("csocso");
+                  alert("Sikeres bejelentkezes");
                   location.assign("index.html");
                 } else {
                   //document.getElementById('BadCode').innerHTML="Hibas email vagy jelszo!";

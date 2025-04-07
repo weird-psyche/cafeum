@@ -27,7 +27,7 @@
       <div class="input-box">
         <input type="password" class="input-field" id="Password2" name="Password2" placeholder="Jelszo ujra" autocomplete="off" required>
     </div>
-      <!--<span id="BadPwd"></span>-->
+      <span id="BadPwd"></span>
       <div class="input-box">
         <input type="text" class="input-field" id="Location" name="Location" placeholder="Lakcim" autocomplete="off" required>
       </div>
@@ -43,6 +43,8 @@
 
         let Pwd1 = document.getElementById('Password').value;
         let Pwd2 = document.getElementById('Password2').value;
+        let Lakcim = document.getElementById('Location').value;
+
         if(Pwd1 != Pwd2) document.getElementById('BadPwd').innerHTML="ELTERO JELSZO";
         else{
         const logindiv = document.getElementById("LoginForm");
@@ -51,7 +53,8 @@
           vasarloNev: logindiv.VezNev.value+" "+logindiv.KerNev.value,
           vasarloMail: logindiv.Email.value,
           vasarloJelszo: logindiv.Password.value,
-          vasarloCim: logindiv.Location.value,
+          //vasarloCim: logindiv.Location.value,
+          vasarloCim: Lakcim.toString(),
         };
         console.log(JSON.stringify(DivData));
 	      const xmlhttp = new XMLHttpRequest();
@@ -68,6 +71,7 @@
 
       xmlhttp.send(JSON.stringify(DivData));
 
+      alert("Sikeres regisztracio");
       location.assign("index.html");
       //  alert("Sikeres regisztracio");
     }
