@@ -19,7 +19,7 @@
         </div>
         <span id="BadCode"></span>
         <div class="input-submit">
-            <button class="submit-btn" id ="submit" onclick="AccountCheck(); fun();"></button></button>
+            <button class="submit-btn" id ="submit" onclick="AccountCheck();"></button></button>
             <label for="submit">Bejelentkezés</label>
         </div>
         <div class="sign-up-link">
@@ -43,16 +43,7 @@
         }
         */
         function fun() {
-          let User="felhasznalo@gmail.com";
-          let PwdLocal="123";
-          let Mail = document.getElementById('Email').value;
-          let Pwd = document.getElementById('Password').value;
-          if(Mail==User && Pwd == PwdLocal){
-            alert("Sikeres bejelentkezes");
-            location.assign("index_guest.html");
-          } else {
-            alert("Sikertelen bejelentkezes");
-          }
+          alert("rakos");
         }
 
         function AccountCheck() {
@@ -60,6 +51,11 @@
           let Pwd = document.getElementById('Password').value;
           let talalt=false;
           let MailIndex=0;
+
+          if(Mail == "felhasznalo@gmail.com" && Pwd == "123"){
+            alert("Sikeres bejelentkezes");
+            location.assign("index_guest.html");
+          }
 
           const xmlhttp = new XMLHttpRequest();
           xmlhttp.onreadystatechange = function () {
@@ -76,7 +72,7 @@
               }
               if(talalt){
                 if(Mail == object[MailIndex].vasarloMail && Pwd == object[MailIndex].vasarloJelszo){
-                  alert("Sikeres bejelentkezes");
+                  alert("Sikeres bejelentkezes");Z
                   location.assign("index_guest.html");
                 } else {
                   //document.getElementById('BadCode').innerHTML="Hibas email vagy jelszo!";

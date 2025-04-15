@@ -17,13 +17,6 @@
     
 }
 
-.back-to-top {
-    position: fixed;
-    display: none;
-    right: 30px;
-    bottom: 30px;
-    z-index: 99;
-}
 
 .fw-medium {
     font-weight: 600;
@@ -92,6 +85,12 @@
     align-items: center;
     justify-content: center;
     font-weight: normal;
+}
+.btn_delete
+{
+    width: 20px;
+    height: 20px;
+    background-color: red;
 }
 
 
@@ -566,6 +565,13 @@
     background: var(--dark);
 }
 
+/*** Kosar ***/
+
+.img-basket
+{
+    width: 20%;
+    height: 20%;
+}
 
 /*** Footer ***/
 .footer {
