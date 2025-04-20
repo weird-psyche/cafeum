@@ -42,9 +42,6 @@
         }
         }
         */
-        function fun() {
-          alert("rakos");
-        }
 
         function AccountCheck() {
           let Mail = document.getElementById('Email').value;
@@ -72,8 +69,8 @@
               }
               if(talalt){
                 if(Mail == object[MailIndex].vasarloMail && Pwd == object[MailIndex].vasarloJelszo){
-                  alert("Sikeres bejelentkezes");Z
-                  location.assign("index_guest.html");
+                  alert("Sikeres bejelentkezes");
+                  location.assign("index_guest.html?"+object[MailIndex].vasarloId);
                 } else {
                   //document.getElementById('BadCode').innerHTML="Hibas email vagy jelszo!";
                   alert("Hibas email vagy jelszo!");

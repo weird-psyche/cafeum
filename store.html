@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="hu">
 
 <head>
@@ -53,8 +53,9 @@
                   <div class="navbar-nav ms-auto">
                       <a href="index.html" class="nav-item nav-link active">Főoldal</a>
                       <a href="about.html" class="nav-item nav-link">Bemutatkozás</a>
-                      <a href="store.html" class="nav-item nav-link">Kávék</a>
-                      <a href="dessert.html" class="nav-item nav-link">Desszertek</a>
+                      <!--<a href="store.html" class="nav-item nav-link">Kávék</a>
+                      <a href="dessert.html" class="nav-item nav-link">Desszertek</a>-->
+                      <a href="store.html" class="nav-item nav-link">Termékek</a>
                       <a href="contact.html" class="nav-item nav-link">Kapcsolat</a>
                       <div class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Fiók</a>
@@ -72,62 +73,113 @@
 
 
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid page-header-kave py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center py-5">
             <h1 class="display-2 text-white mb-4 animated slideInDown">Kávéink</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item">Válassz bármely frissen őrölt kávénkból!</li>
                 </ol>
+                <div class="breadcrumb justify-content-center mb-0 clearing">
+                  <a href="#finomsagok" class="btn btn-light rounded-pill py-3 px-5">Ugrás a finomságokhoz!</a>
+                </div>
             </nav>
         </div>
     </div>
     <!-- Page Header End -->
 
 
-    <!-- Store Start -->
-    <div class="container-xxl py-5">
+   <!-- Kave Store Start -->
+   <div class="container-xxl py-5">
+    <div class="container">
+        <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h1 class="display-6">Espresso</h1>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="store-item position-relative text-center">
+                  <img class="img-fluid" src="img/espresso.jpg" alt="">
+                  <div class="p-4">
+                      <h4 class="mb-3" id="kvespresso">Espresso</h4>
+                      <p>Intenzív ízű és gazdag aromájú kávékülönlegesség</p>
+                      <h4 class="text-primary">690Ft-tól</h4>
+                  </div>
+                  <div class="store-overlay">
+                    <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="store-item position-relative text-center">
+                  <img class="img-fluid" src="img/espresso_macchiato.jpg" alt="">
+                  <div class="p-4">
+                      <h4 class="mb-3">Espresso Macchiato</h4>
+                      <p>Intenzív kávé, amelyet egy leheletnyi tejhab tesz lágyabbá</p>
+                      <h4 class="text-primary">750Ft-tól</h4>
+                  </div>
+                  <div class="store-overlay">
+                    <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                  </div>
+              </div>
+          </div>
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="store-item position-relative text-center">
+                    <img class="img-fluid" src="img/con_panna.jpg" alt="">
+                    <div class="p-4">
+                        <h4 class="mb-3">Espresso Con Panna</h4>
+                        <p>Intenzív kávé, amelyet gazdag tejszínhab koronáz meg</p>
+                        <h4 class="text-primary">750Ft-tól</h4>
+                    </div>
+                    <div class="store-overlay">
+                      <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
         <div class="container">
             <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6">Espresso</h1>
+                <h1 class="display-6">Cappuccino</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="store-item position-relative text-center">
-                        <img class="img-fluid" src="img/espresso.jpg" alt="">
+                        <img class="img-fluid" src="img/cappuccino.jpg" alt="">
                         <div class="p-4">
-                            <h4 class="mb-3">Espresso</h4>
-                            <p>Intenzív ízű és gazdag aromájú kávékülönlegesség</p>
-                            <h4 class="text-primary">690Ft-tól</h4>
+                            <h4 class="mb-3">Cappuccino</h4>
+                            <p>Az eszpresszó gazdag íze találkozik a selymes tejhabbal</p>
+                            <h4 class="text-primary">1190Ft-tól</h4>
                         </div>
                         <div class="store-overlay">
-                            <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                          <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="store-item position-relative text-center">
-                        <img class="img-fluid" src="img/espresso_macchiato.jpg" alt="">
+                        <img class="img-fluid" src="img/freddo_cappuccino.jpg" alt="">
                         <div class="p-4">
-                            <h4 class="mb-3">Espresso Macchiato</h4>
-                            <p>Intenzív kávé, amelyet egy leheletnyi tejhab tesz lágyabbá</p>
-                            <h4 class="text-primary">750Ft-tól</h4>
+                            <h4 class="mb-3">Freddo Cappuccino</h4>
+                            <p>Kávékülönlegesség, amely hideg eszpresszóból és krémes tejhabból készül</p>
+                            <h4 class="text-primary">1290Ft-tól</h4>
                         </div>
                         <div class="store-overlay">
-                            <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                          <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="store-item position-relative text-center">
-                        <img class="img-fluid" src="img/con_panna.jpg" alt="">
+                        <img class="img-fluid" src="img/c_cappuccino.jpg" alt="">
                         <div class="p-4">
-                            <h4 class="mb-3">Espresso Con Panna</h4>
-                            <p>Intenzív kávé, amelyet gazdag tejszínhab koronáz meg</p>
-                            <h4 class="text-primary">750Ft-tól</h4>
+                            <h4 class="mb-3">Karamellás Cappuccino</h4>
+                            <p>Az eszpresszó gazdag ízét a selymes tejhab és az édes karamell tökéletes kombinációjával emeli ki</p>
+                            <h4 class="text-primary">1390Ft-tól</h4>
                         </div>
                         <div class="store-overlay">
-                            <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                          <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -135,258 +187,476 @@
             <br>
             <br>
             <br>
-            <div class="container">
-                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="display-6">Cappuccino</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/cappuccino.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Cappuccino</h4>
-                                <p>Az eszpresszó gazdag íze találkozik a selymes tejhabbal</p>
-                                <h4 class="text-primary">1190Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="rendeles_test.html" class="btn btn-primary rounded-pill py-2 px-4 m-2">More Detail <i class="fa fa-arrow-right ms-2"></i></a>
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba <i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/freddo_cappuccino.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Freddo Cappuccino</h4>
-                                <p>Kávékülönlegesség, amely hideg eszpresszóból és krémes tejhabból készül</p>
-                                <h4 class="text-primary">1290Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/c_cappuccino.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Karamellás Cappuccino</h4>
-                                <p>Az eszpresszó gazdag ízét a selymes tejhab és az édes karamell tökéletes kombinációjával emeli ki</p>
-                                <h4 class="text-primary">1390Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <br>
-            </div>
-            <div class="container">
-                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="display-6">Americano</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/americano.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Caffé Americano</h4>
-                                <p>Az eszpresszó és forró víz elegáns párosítása</p>
-                                <h4 class="text-primary">1050Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/ice_americano.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Caffé Americano on Ice</h4>
-                                <p>Az eszpresszó gazdag íze frissítő jégkockákkal párosul</p>
-                                <h4 class="text-primary">1390Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/v_americano.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Vanilliás Caffé Americano</h4>
-                                <p>Az eszpresszó és forró víz lágy elegyét a finom vaníliás ízesítéssel teszi különlegessé</p>
-                                <h4 class="text-primary">1490Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <br>
-            </div>
-            <div class="container">
-                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="display-6">Café Latte</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/latte.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Caffé Latte</h4>
-                                <p>Az eszpresszó és gőzölt tej harmonikus párosítása</p>
-                                <h4 class="text-primary">1250Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/m_latte.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Macadam Latte</h4>
-                                <p>Az eszpresszó és krémes tej különleges párosítása, amelyet a lágy makadámdió ízvilága tesz igazán egyedivé.</p>
-                                <h4 class="text-primary">1290Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/p_latte.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Pistachio Latte</h4>
-                                <p>Az eszpresszó és gőzölt tej krémes párosítása, amelyet a pisztácia finoman diós íze tesz igazán különlegessé.</p>
-                                <h4 class="text-primary">1290Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <br>
-            </div>
-            <div class="container">
-                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="display-6">Matcha</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/matcha_latte.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Matcha Latte</h4>
-                                <p>A gőzölt tej és finom matcha zöld tea tökéletes kombinációja</p>
-                                <h4 class="text-primary">1290Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/ice_matcha.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Matcha Latte on Ice</h4>
-                                <p>A gőzölt tej és matcha zöld tea hűsítő változata</p>
-                                <h4 class="text-primary">1390Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/v_matcha.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Vanilliás Matcha Cappuccino</h4>
-                                <p>A lágy vanília, matcha zöld tea és selymes tejhab ínycsiklandó kombinációja</p>
-                                <h4 class="text-primary">1490Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <br>
-            </div>
-            <div class="container">
-                <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                    <h1 class="display-6">Egyébb italaink</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/flat_w.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Flat White</h4>
-                                <p>Az eszpresszó gazdag íze tökéletesen kiegészül a finoman gőzölt tej selymes textúrájával</p>
-                                <h4 class="text-primary">1290Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/f_csoki.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Forro Csokoládé</h4>
-                                <p>Az olvasztott csokoládé és a meleg tej tökéletes harmóniában találkozik</p>
-                                <h4 class="text-primary">1390Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="store-item position-relative text-center">
-                            <img class="img-fluid" src="img/chai_tea.jpg" alt="">
-                            <div class="p-4">
-                                <h4 class="mb-3">Chai Latte Tea</h4>
-                                <p>A fekete tea, fűszerek és a krémes tej tökéletes harmóniában találkozik</p>
-                                <h4 class="text-primary">1290Ft-tól</h4>
-                            </div>
-                            <div class="store-overlay">
-                                <a href="basket.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <br>
-            </div>
-
-
-
         </div>
+        <div class="container">
+            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-6">Americano</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="store-item position-relative text-center">
+                        <img class="img-fluid" src="img/americano.jpg" alt="">
+                        <div class="p-4">
+                            <h4 class="mb-3">Caffé Americano</h4>
+                            <p>Az eszpresszó és forró víz elegáns párosítása</p>
+                            <h4 class="text-primary">1050Ft-tól</h4>
+                        </div>
+                        <div class="store-overlay">
+                            <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="store-item position-relative text-center">
+                        <img class="img-fluid" src="img/ice_americano.jpg" alt="">
+                        <div class="p-4">
+                            <h4 class="mb-3">Caffé Americano on Ice</h4>
+                            <p>Az eszpresszó gazdag íze frissítő jégkockákkal párosul</p>
+                            <h4 class="text-primary">1390Ft-tól</h4>
+                        </div>
+                        <div class="store-overlay">
+                            <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="store-item position-relative text-center">
+                        <img class="img-fluid" src="img/v_americano.jpg" alt="">
+                        <div class="p-4">
+                            <h4 class="mb-3">Vanilliás Caffé Americano</h4>
+                            <p>Az eszpresszó és forró víz lágy elegyét a finom vaníliás ízesítéssel teszi különlegessé</p>
+                            <h4 class="text-primary">1490Ft-tól</h4>
+                        </div>
+                        <div class="store-overlay">
+                            <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="container">
+            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-6">Café Latte</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="store-item position-relative text-center">
+                        <img class="img-fluid" src="img/latte.jpg" alt="">
+                        <div class="p-4">
+                            <h4 class="mb-3">Caffé Latte</h4>
+                            <p>Az eszpresszó és gőzölt tej harmonikus párosítása</p>
+                            <h4 class="text-primary">1250Ft-tól</h4>
+                        </div>
+                        <div class="store-overlay">
+                            <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="store-item position-relative text-center">
+                        <img class="img-fluid" src="img/m_latte.jpg" alt="">
+                        <div class="p-4">
+                            <h4 class="mb-3">Macadam Latte</h4>
+                            <p>Az eszpresszó és krémes tej különleges párosítása, amelyet a lágy makadámdió ízvilága tesz igazán egyedivé.</p>
+                            <h4 class="text-primary">1290Ft-tól</h4>
+                        </div>
+                        <div class="store-overlay">
+                            <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="store-item position-relative text-center">
+                        <img class="img-fluid" src="img/p_latte.jpg" alt="">
+                        <div class="p-4">
+                            <h4 class="mb-3">Pistachio Latte</h4>
+                            <p>Az eszpresszó és gőzölt tej krémes párosítása, amelyet a pisztácia finoman diós íze tesz igazán különlegessé.</p>
+                            <h4 class="text-primary">1290Ft-tól</h4>
+                        </div>
+                        <div class="store-overlay">
+                            <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="container">
+            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-6">Matcha</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="store-item position-relative text-center">
+                        <img class="img-fluid" src="img/matcha_latte.jpg" alt="">
+                        <div class="p-4">
+                            <h4 class="mb-3">Matcha Latte</h4>
+                            <p>A gőzölt tej és finom matcha zöld tea tökéletes kombinációja</p>
+                            <h4 class="text-primary">1290Ft-tól</h4>
+                        </div>
+                        <div class="store-overlay">
+                            <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="store-item position-relative text-center">
+                        <img class="img-fluid" src="img/ice_matcha.jpg" alt="">
+                        <div class="p-4">
+                            <h4 class="mb-3">Matcha Latte on Ice</h4>
+                            <p>A gőzölt tej és matcha zöld tea hűsítő változata</p>
+                            <h4 class="text-primary">1390Ft-tól</h4>
+                        </div>
+                        <div class="store-overlay">
+                            <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="store-item position-relative text-center">
+                        <img class="img-fluid" src="img/v_matcha.jpg" alt="">
+                        <div class="p-4">
+                            <h4 class="mb-3">Vanilliás Matcha Cappuccino</h4>
+                            <p>A lágy vanília, matcha zöld tea és selymes tejhab ínycsiklandó kombinációja</p>
+                            <h4 class="text-primary">1490Ft-tól</h4>
+                        </div>
+                        <div class="store-overlay">
+                            <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="container">
+            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h1 class="display-6">Egyébb italaink</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="store-item position-relative text-center">
+                        <img class="img-fluid" src="img/flat_w.jpg" alt="">
+                        <div class="p-4">
+                            <h4 class="mb-3">Flat White</h4>
+                            <p>Az eszpresszó gazdag íze tökéletesen kiegészül a finoman gőzölt tej selymes textúrájával</p>
+                            <h4 class="text-primary">1290Ft-tól</h4>
+                        </div>
+                        <div class="store-overlay">
+                            <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="store-item position-relative text-center">
+                        <img class="img-fluid" src="img/f_csoki.jpg" alt="">
+                        <div class="p-4">
+                            <h4 class="mb-3">Forro Csokoládé</h4>
+                            <p>Az olvasztott csokoládé és a meleg tej tökéletes harmóniában találkozik</p>
+                            <h4 class="text-primary">1390Ft-tól</h4>
+                        </div>
+                        <div class="store-overlay">
+                            <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="store-item position-relative text-center">
+                        <img class="img-fluid" src="img/chai_tea.jpg" alt="">
+                        <div class="p-4">
+                            <h4 class="mb-3">Chai Latte Tea</h4>
+                            <p>A fekete tea, fűszerek és a krémes tej tökéletes harmóniában találkozik</p>
+                            <h4 class="text-primary">1290Ft-tól</h4>
+                        </div>
+                        <div class="store-overlay">
+                            <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+        </div>
+
+
+
     </div>
-    <!--Store End-->
+</div>
+<!-- Kave Store End-->
+
+<!-- Desszert Page Header Start -->
+<div class="container-fluid page-header-desszert py-5 wow fadeIn" data-wow-delay="0.1s" id="finomsagok">
+  <div class="container text-center py-5">
+      <h1 class="display-2 text-white mb-4 animated slideInDown">Finomságaink</h1>
+      <!--<nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb justify-content-center mb-0">
+              <li class="breadcrumb-item">Válassz desszertjeink közül!</li>
+          </ol>
+      </nav>-->
+  </div>
+</div>
+<!-- Desszert Page Header End -->
+
+
+<!-- Desszert Store Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+      <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+          <h1 class="display-6">Browniek</h1>
+      </div>
+      <div class="row g-4">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="store-item position-relative text-center">
+                  <img class="img-fluid" src="img/brownie1.jpg" alt="">
+                  <div class="p-4">
+                      <h4 class="mb-3">Brownie</h4>
+                      <p>Enyhén roppanós, belül pedig lágyan omlós.</p>
+                      <h4 class="text-primary">450Ft</h4>
+                  </div>
+                  <div class="store-overlay">
+                      <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="store-item position-relative text-center">
+                  <img class="img-fluid" src="img/brownie2.jpg" alt="">
+                  <div class="p-4">
+                      <h4 class="mb-3">Dupla csokis Brownie</h4>
+                      <p>Intenzív csokoládéélmény minden falatban</p>
+                      <h4 class="text-primary">550Ft</h4>
+                  </div>
+                  <div class="store-overlay">
+                      <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="store-item position-relative text-center">
+                  <img class="img-fluid" src="img/brownie3.jpg" alt="">
+                  <div class="p-4">
+                      <h4 class="mb-3">Cherry Brownie</h4>
+                      <p>Egy klasszikus brownie megbolondítva a zamatos cseresznye ízével</p>
+                      <h4 class="text-primary">550Ft</h4>
+                  </div>
+                  <div class="store-overlay">
+                      <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="container">
+          <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+              <h1 class="display-6">Bagelek</h1>
+          </div>
+          <div class="row g-4">
+              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                  <div class="store-item position-relative text-center">
+                      <img class="img-fluid" src="img/s_bagel.jpg" alt="">
+                      <div class="p-4">
+                          <h4 class="mb-3">Sonkás Bagel</h4>
+                          <p>A friss bagel belsejét zamatos sonka és ízletes kiegészítők gazdagítják</p>
+                          <h4 class="text-primary">2200Ft</h4>
+                      </div>
+                      <div class="store-overlay">
+                          <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                  <div class="store-item position-relative text-center">
+                      <img class="img-fluid" src="img/b_bagel.jpg" alt="">
+                      <div class="p-4">
+                          <h4 class="mb-3">Erdélyi padlizsánkrémes Bagel</h4>
+                          <p>A friss bagelt az ízletes, hagyományos padlizsánkrém teszi igazán egyedivé</p>
+                          <h4 class="text-primary">2200Ft</h4>
+                      </div>
+                      <div class="store-overlay">
+                          <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                  <div class="store-item position-relative text-center">
+                      <img class="img-fluid" src="img/cs_bagel.jpg" alt="">
+                      <div class="p-4">
+                          <h4 class="mb-3">Csirkés majonézes Bagel</h4>
+                          <p>A szaftos csirkehúst krémes majonéz és friss zöldségek teszik még finomabbá a puha bagelben</p>
+                          <h4 class="text-primary">2200Ft</h4>
+                      </div>
+                      <div class="store-overlay">
+                          <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <br>
+          <br>
+          <br>
+      </div>
+      <div class="container">
+          <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+              <h1 class="display-6">Piték</h1>
+          </div>
+          <div class="row g-4">
+              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                  <div class="store-item position-relative text-center">
+                      <img class="img-fluid" src="img/apple_pie.jpg" alt="">
+                      <div class="p-4">
+                          <h4 class="mb-3">Almás Pite</h4>
+                          <p>Az omlós tészta és a fűszeres, édes almás töltelék tökéletes harmóniában találkozik</p>
+                          <h4 class="text-primary">990Ft</h4>
+                      </div>
+                      <div class="store-overlay">
+                          <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                  <div class="store-item position-relative text-center">
+                      <img class="img-fluid" src="img/c_pie.jpg" alt="">
+                      <div class="p-4">
+                          <h4 class="mb-3">Meggyes Pite</h4>
+                          <p>Az omlós tészta és a fanyar-édes meggytöltelék különleges ízkombinációt alkot</p>
+                          <h4 class="text-primary">990Ft</h4>
+                      </div>
+                      <div class="store-overlay">
+                          <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                  <div class="store-item position-relative text-center">
+                      <img class="img-fluid" src="img/v_pie.jpg" alt="">
+                      <div class="p-4">
+                          <h4 class="mb-3">Vegán szilvás Pite</h4>
+                          <p>Növényi alapú tészta találkozik a lédús és édes szilvás töltelékkel</p>
+                          <h4 class="text-primary">790Ft</h4>
+                      </div>
+                      <div class="store-overlay">
+                          <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <br>
+          <br>
+          <br>
+      </div>
+      <div class="container">
+          <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+              <h1 class="display-6">Torták</h1>
+          </div>
+          <div class="row g-4">
+              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                  <div class="store-item position-relative text-center">
+                      <img class="img-fluid" src="img/s_cake.jpg" alt="">
+                      <div class="p-4">
+                          <h4 class="mb-3">Epres Sajttorta</h4>
+                          <p>A krémes sajtréteg találkozik a friss, édes eperrel és a ropogós alap tésztával.</p>
+                          <h4 class="text-primary">1450Ft</h4>
+                      </div>
+                      <div class="store-overlay">
+                          <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                  <div class="store-item position-relative text-center">
+                      <img class="img-fluid" src="img/c_cake.jpg" alt="">
+                      <div class="p-4">
+                          <h4 class="mb-3">New York Sajttorta</h4>
+                          <p>Krémes sajtréteg, ropogós tésztakéreg és letisztult, egyszerű ízvilág jellemez</p>
+                          <h4 class="text-primary">1550Ft</h4>
+                      </div>
+                      <div class="store-overlay">
+                          <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                  <div class="store-item position-relative text-center">
+                      <img class="img-fluid" src="img/ac_cake.jpg" alt="">
+                      <div class="p-4">
+                          <h4 class="mb-3">Almás Sajttorta</h4>
+                          <p>A krémes sajtréteg találkozik a fűszeres, édes almaszeletekkel</p>
+                          <h4 class="text-primary">1450Ft</h4>
+                      </div>
+                      <div class="store-overlay">
+                          <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <br>
+          <br>
+          <br>
+      </div>
+      <div class="container">
+          <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+              <h1 class="display-6">Croissantok</h1>
+          </div>
+          <div class="row g-4">
+              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                  <div class="store-item position-relative text-center">
+                      <img class="img-fluid" src="img/l_croissant.jpg" alt="">
+                      <div class="p-4">
+                          <h4 class="mb-3">Croissant lekvárral, vajjal</h4>
+                          <p>Belsejét édes, gyümölcsös lekvár teszi igazán ellenállhatatlanná</p>
+                          <h4 class="text-primary">780Ft</h4>
+                      </div>
+                      <div class="store-overlay">
+                          <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                  <div class="store-item position-relative text-center">
+                      <img class="img-fluid" src="img/m_croissant.jpg" alt="">
+                      <div class="p-4">
+                          <h4 class="mb-3">Mogyorókrémes Croissant</h4>
+                          <p>Belsejét a gazdag és krémes Nutella töltelék teszi ellenállhatatlanul édessé</p>
+                          <h4 class="text-primary">880Ft</h4>
+                      </div>
+                      <div class="store-overlay">
+                          <a href="login.html" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                  <div class="store-item position-relative text-center">
+                      <img class="img-fluid" src="img/s_croissant.jpg" alt="">
+                      <div class="p-4">
+                          <h4 class="mb-3">Sajtos, sonkás croissant</h4>
+                          <p>Zamatos sonka és olvadt sajt tesz igazán laktatóvá és ellenállhatatlanná</p>
+                          <h4 class="text-primary">880Ft</h4>
+                      </div>
+                      <div class="store-overlay">
+                          <a href="" class="btn btn-dark rounded-pill py-2 px-4 m-2">Kosárba<i class="fa fa-cart-plus ms-2"></i></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <br>
+          <br>
+          <br>
+      </div>
+
+
+
+  </div>
+</div>
+<!-- Desszert Store End -->
 
 
     <!-- Footer Start -->
@@ -430,6 +700,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/rendeles.js"></script>
 </body>
 
 </html>
