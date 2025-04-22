@@ -81,8 +81,12 @@
               }
             }
           }
-          xmlhttp.open("GET","https://localhost:7032/api/cafeum/vasarlok",true);
-          xmlhttp.send();
+          //xmlhttp.open("GET","https://localhost:7032/api/cafeum/vasarlok",true);
+
+            xmlhttp.open("GET","https://3d1e-80-99-39-238.ngrok-free.app/api/cafeum/vasarlok",true);
+            xmlhttp.setRequestHeader("ngrok-skip-browser-warning", "1");
+
+            xmlhttp.send();
         }
     </script>
 
