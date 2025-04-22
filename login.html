@@ -15,7 +15,7 @@
             <input type="email" class="input-field" id ="Email" placeholder="Email" autocomplete="off" required>
         </div>
         <div class="input-box">
-            <input type="password" class="input-field" id ="Password" placeholder="Jelszo" autocomplete="off" required>
+            <input type="password" class="input-field" id ="Password" placeholder="Jelszó" autocomplete="off" required>
         </div>
         <span id="BadCode"></span>
         <div class="input-submit">
@@ -49,8 +49,8 @@
           let talalt=false;
           let MailIndex=0;
 
-          if(Mail == "admin" && Pwd == "cafeumadmin"){
-            alert("ADMIN");
+          if(Mail == "admin-panel" && Pwd == "admincafeum"){
+            alert("Sikeres bejelentkezes ADMIN");
             location.assign("admin.html");
           }
 
@@ -81,12 +81,15 @@
               }
             }
           }
-          //xmlhttp.open("GET","https://localhost:7032/api/cafeum/vasarlok",true);
+            xmlhttp.open("GET","https://localhost:7032/api/cafeum/vasarlok",true);
 
-            xmlhttp.open("GET","https://3d1e-80-99-39-238.ngrok-free.app/api/cafeum/vasarlok",true);
-            xmlhttp.setRequestHeader("ngrok-skip-browser-warning", "1");
 
-            xmlhttp.send();
+		  //xmlhttp.open("GET","https://vulture-golden-willingly.ngrok-free.app/api/cafeum/vasarlok",true);
+      //xmlhttp.open("GET","https://3d1e-80-99-39-238.ngrok-free.app/api/cafeum/vasarlok",true);
+		  //xmlhttp.setRequestHeader("ngrok-skip-browser-warning",true);
+		  //xmlhttp.setRequestHeader("ngrok-skip-browser-warning", "1");
+
+          xmlhttp.send();
         }
     </script>
 

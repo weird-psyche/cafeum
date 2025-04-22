@@ -4,7 +4,7 @@
 
   console.log(location.search);
   let vasarloId=location.search;
-  document.getElementById("vasarloid").innerHTML=vasarloId;
+  // -- ki kell szedni az osszeset -- document.getElementById("vasarloid").innerHTML=vasarloId;
 
 
 function switcher(link) {

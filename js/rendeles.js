@@ -76,6 +76,7 @@ function RendelesLeadas() {
 		}
 	};
   xmlhttp.open("POST","https://localhost:7032/api/cafeum/rendelesek", true);
+  //xmlhttp.open("POST", "https://7e2c-80-99-39-238.ngrok-free.app/api/cafeum/rendelesek", true);
   xmlhttp.setRequestHeader("Content-Type","application/json");
 
   //if(kosar[1] != null) xmlhttp.send(JSON.stringify(kosar[0]));
@@ -106,6 +107,7 @@ function RendelesKesz() {
   }
 
   xmlhttp2.open("GET","https://localhost:7032/api/cafeum/rendelesek",true);
+  //xmlhttp2.open("GET","https://7e2c-80-99-39-238.ngrok-free.app/api/cafeum/rendelesek", true);
   xmlhttp2.send();
   document.getElementById("tablakint").innerHTML="Üres";
 }
@@ -130,6 +132,7 @@ window.onload = function () {
     }
   }
   xmlhttp.open("GET","https://localhost:7032/api/cafeum/termek",true);
+  //xmlhttp.open("GET","https://7e2c-80-99-39-238.ngrok-free.app/api/cafeum/termek",true);
   xmlhttp.send();
 
 
@@ -150,6 +153,7 @@ window.onload = function () {
   }
 
   xmlhttp2.open("GET","https://localhost:7032/api/cafeum/rendelesek",true);
+  //xmlhttp2.open("GET","https://7e2c-80-99-39-238.ngrok-free.app/api/cafeum/rendelesek",true);
   xmlhttp2.send();
 
   document.getElementById('tablakint').innerHTML="<tbody><tr>Üres<tr></tbody>"

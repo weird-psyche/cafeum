@@ -47,7 +47,7 @@
                   <img src="img/kv-logo.png" alt="Logo">
               </a>-->
               <a onclick="switcher('index_guest.html',vasarloId)" class="navbar-brand">
-                <img src="img/kv-logo.png" alt="Logo">
+                <img src="img/kv-logo.png" alt="Logo"  class="navbar-image">
             </a>
               <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                   <span class="navbar-toggler-icon"></span>
@@ -95,13 +95,58 @@
     <!-- Page Header End -->
 
 
-    <!-- Contact Start -->
-    <div class="container-xxl contact py-5">
-      <div class="container">
-          <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-              <h1 class="display-6">Ha bármi kérdésed lenne, keress minket!</h1>
-          </div>
-          <div class="row g-5 mb-5">
+   <!-- Contact Start -->
+   <div class="container-xxl contact py-5">
+    <div class="container">
+        <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h1 class="display-6">Ha bármi kérdésed lenne, keress minket!</h1>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h3 class="mb-4">Szeretnéd felvenni velünk a kapcsolatot?</h3>
+                <p class="mb-4">Kérjük itt irjon egy levelet, és az ügyfélszolgálat felveszi önnel a kapcsolatot.</p>
+                <form id="ContactForm">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                                <label for="name">Név</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                <label for="subject">Téma</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 120px"></textarea>
+                                <label for="message">Üzenet</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary rounded-pill py-3 px-5" type="submit" onclick="KontaktKuldes();">Küldés</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="h-100">
+                    <iframe class="w-100 rounded"
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5421.688902005384!2d18.138675!3d47.200057!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47698bec10f9d8b3%3A0xeaad4d71216f21b4!2zRmFsbGVyIEplbsWRIFRlY2huaWt1bSwgU3pha2vDqXB6xZEgSXNrb2xhIMOpcyBLb2xsw6lnaXVt!5e0!3m2!1shu!2shu!4v1743862730936!5m2!1shu!2shu"
+                    frameborder="0" style="height: 100%; min-height: 300px; border:0;" allowfullscreen = "true" aria-hidden="false"
+                    tabindex="0"></iframe>
+                </div>
+            </div>
+            <div class="row g-5 mb-5">
               <div class="col-md-4 text-center wow fadeInUp" data-wow-delay="0.3s">
                   <div class="btn-square mx-auto mb-3">
                       <i class="fa fa-envelope fa-2x text-white"></i>
@@ -122,54 +167,11 @@
                   <p class="mb-0">Szent István út 1</p>
               </div>
           </div>
-          <div class="row g-5">
-              <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                  <h3 class="mb-4">Szeretnéd felvenni velünk a kapcsolatot?</h3>
-                  <p class="mb-4">Kérjük itt irjon egy levelet, és az ügyfélszolgálat felveszi önnel a kapcsolatot.</p>
-                  <form id="ContactForm">
-                      <div class="row g-3">
-                          <div class="col-md-6">
-                              <div class="form-floating">
-                                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
-                                  <label for="name">Név</label>
-                              </div>
-                          </div>
-                          <div class="col-md-6">
-                              <div class="form-floating">
-                                  <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
-                                  <label for="email">Email</label>
-                              </div>
-                          </div>
-                          <div class="col-12">
-                              <div class="form-floating">
-                                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
-                                  <label for="subject">Téma</label>
-                              </div>
-                          </div>
-                          <div class="col-12">
-                              <div class="form-floating">
-                                  <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 120px"></textarea>
-                                  <label for="message">Üzenet</label>
-                              </div>
-                          </div>
-                          <div class="col-12">
-                              <button class="btn btn-primary rounded-pill py-3 px-5" type="submit" onclick="KontaktKuldes();">Küldés</button>
-                          </div>
-                      </div>
-                  </form>
-              </div>
-              <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                  <div class="h-100">
-                      <iframe class="w-100 rounded"
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5421.688902005384!2d18.138675!3d47.200057!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47698bec10f9d8b3%3A0xeaad4d71216f21b4!2zRmFsbGVyIEplbsWRIFRlY2huaWt1bSwgU3pha2vDqXB6xZEgSXNrb2xhIMOpcyBLb2xsw6lnaXVt!5e0!3m2!1shu!2shu!4v1743862730936!5m2!1shu!2shu"
-                      frameborder="0" style="height: 100%; min-height: 300px; border:0;" allowfullscreen = "true" aria-hidden="false"
-                      tabindex="0"></iframe>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Contact End -->
+        </div>
+    </div>
+
+</div>
+<!-- Contact End -->
 
   <script>
     function KontaktKuldes() {
@@ -202,32 +204,34 @@
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-primary mb-4">Elérhetőség</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>8100 Várpalota, Szent István út 1.</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+36/88/582-520</p>
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>info@falleriskola.hu</p>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-primary mb-4">Linkek</h4>
-                    <a class="btn btn-link" href="about.html">Rólunk</a>
-                    <a class="btn btn-link" href="contact.html">Kapcsolat</a>
-                    <a class="btn btn-link" href="feature.html">Szolgáltatások</a>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <h4 class="text-primary mb-4">Nyitvatartás</h4>
-                    <p class="mb-1">Hétfő - Péntek</p>
-                    <h6 class="text-light">09:00 - 19:00</h6>
-                    <p class="mb-1">Szombat</p>
-                    <h6 class="text-light">09:00 - 12:00</h6>
-                    <p class="mb-1">Vasárnap</p>
-                    <h6 class="text-light">Zárva</h6>
-                </div>
-            </div>
-        </div>
-    </div>
+      <div class="container py-5">
+          <div class="row g-5 text-center">
+              <div class="col-lg-6 col-md-6">
+                  <h4 class="text-primary mb-4">Elérhetőség</h4>
+                  <p class="mb-2"><i class="fa fa-map-marker-alt text-light me-3"></i>8100 Várpalota, Szent István út 1.</p>
+                  <p class="mb-2"><i class="fa fa-phone-alt text-light me-3"></i>+36/88/582-520</p>
+                  <p class="mb-2"><i class="fa fa-envelope text-light me-3"></i>info@falleriskola.hu</p>
+              </div>
+              <!--
+              <div class="col-lg-4 col-md-6">
+                  <h4 class="text-primary mb-4">Linkek</h4>
+                  <a class="btn btn-link" href="about.html">Rólunk</a>
+                  <a class="btn btn-link" href="contact.html">Kapcsolat</a>
+                  <a class="btn btn-link" href="feature.html">Szolgáltatások</a>
+              </div>
+              -->
+              <div class="col-lg-6 col-md-6">
+                  <h4 class="text-primary mb-4">Rendelés leadás</h4>
+                  <p class="mb-1">Hétfő - Péntek</p>
+                  <h6 class="text-light">06:00 - 18:00</h6>
+                  <p class="mb-1">Szombat</p>
+                  <h6 class="text-light">06:00 - 12:00</h6>
+                  <p class="mb-1">Vasárnap</p>
+                  <h6 class="text-light">Zárva</h6>
+              </div>
+          </div>
+      </div>
+  </div>
     <!-- Footer End -->
 
 

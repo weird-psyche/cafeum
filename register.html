@@ -13,23 +13,23 @@
       </div>
       <form id="LoginForm">
       <div class="input-box">
-          <input type="text" class="input-field" id="VezNev" name="VezNev" placeholder="Vezeteknev" autocomplete="off" required>
+          <input type="text" class="input-field" id="VezNev" name="VezNev" placeholder="Vezetéknév" autocomplete="off" required>
       </div>
       <div class="input-box">
-          <input type="text" class="input-field" id="KerNev" name="KerNev" placeholder="Keresztnev" autocomplete="off" required>
+          <input type="text" class="input-field" id="KerNev" name="KerNev" placeholder="Keresztnév" autocomplete="off" required>
       </div>
       <div class="input-box">
           <input type="email" class="input-field" id="Email" name="Email" placeholder="Email" autocomplete="off" required>
       </div>
       <div class="input-box">
-          <input type="password" class="input-field" id="Password" name="Password" placeholder="Jelszo" autocomplete="off" required>
+          <input type="password" class="input-field" id="Password" name="Password" placeholder="Jelszó" autocomplete="off" required>
       </div>
       <div class="input-box">
-        <input type="password" class="input-field" id="Password2" name="Password2" placeholder="Jelszo ujra" autocomplete="off" required>
+        <input type="password" class="input-field" id="Password2" name="Password2" placeholder="Jelszó újra" autocomplete="off" required>
     </div>
       <span id="BadPwd"></span>
       <div class="input-box">
-        <input type="text" class="input-field" id="Location" name="Location" placeholder="Lakcim" autocomplete="off" required>
+        <input type="text" class="input-field" id="Location" name="Location" placeholder="Lakcím" autocomplete="off" required>
       </div>
     </form>
       <div class="input-submit">
@@ -70,6 +70,7 @@
 		    }
 	    };
       xmlhttp.open("POST","https://localhost:7032/api/cafeum/vasarlok", true);
+      //xmlhttp.open("POST","https://7e2c-80-99-39-238.ngrok-free.app/api/cafeum/vasarlok", true)
       xmlhttp.setRequestHeader("Content-Type","application/json");
 
       xmlhttp.send(JSON.stringify(DivData));
@@ -99,6 +100,7 @@
       }
 
       xmlhttp.open("GET","https://localhost:7032/api/cafeum/vasarlok",true);
+      //xmlhttp.open("GET","https://7e2c-80-99-39-238.ngrok-free.app/api/cafeum/rendelesek", true);
       xmlhttp.send();
     }
     </script>
