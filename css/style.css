@@ -182,6 +182,11 @@
     }
 }
 
+.navbar-image {
+  max-width: 45%;
+  height: auto;
+}
+
 
 /*** Header ***/
 .carousel-caption {
