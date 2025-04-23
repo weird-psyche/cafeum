@@ -37,7 +37,7 @@ function Kosarba(kvid) {
         if(kosar[i].termekId == termektabla[j].termekId) kvneve=termektabla[j].termekNev;
       }
       szoveg+="<button class='btn_delete' onclick='RendelesKi("+i+");'></button>"
-      szoveg+=kvneve+"</td></tr>";
+      szoveg+="<p>"+kvneve+"</p></td></tr>";
     }
   szoveg+="</tbody>"
   szoveg+="<button class='btn btn-dark py-2 px-2 m-2' onclick='RendelesLeadas()'>Rendelés leadása</button>";
@@ -59,7 +59,7 @@ function RendelesKi(index) {
         if(kosar[i].termekId == termektabla[j].termekId) kvneve=termektabla[j].termekNev;
       }
       szoveg+="<button class='btn_delete' onclick='RendelesKi("+i+");'></button>"
-      szoveg+=kvneve+"</td></tr>";
+      szoveg+="<p>"+kvneve+"</p></td></tr>";
     }
   szoveg+="</tbody>"
   szoveg+="<button class='btn btn-dark py-2 px-2 m-2' onclick='RendelesLeadas()'>Rendelés leadása</button>";
