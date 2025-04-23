@@ -17,8 +17,8 @@
 
 }
 
-.server-status {
-  color: yellow;
+#server-status {
+  color: red;
   font-weight: bold;
   background-color: black;
 }
