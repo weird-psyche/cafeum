@@ -10,3 +10,6 @@
 function switcher(link) {
   location.assign(link+vasarloId);
 }
+function switcher2(link) {
+  location.assign(link+vasarloId+"#finomsagok");
+}
