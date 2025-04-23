@@ -58,7 +58,7 @@
           xmlhttp.onreadystatechange = function () {
             if(this.readyState==4 && this.status==200){
               const object = JSON.parse(this.responseText);
-              console.log(object);
+              //console.log(object);
               for(let i=0;i<object.length;i++){
                 if(Mail==object[i].vasarloMail){
                   talalt=true;
@@ -81,15 +81,14 @@
               }
             }
           }
-            xmlhttp.open("GET","https://localhost:7032/api/cafeum/vasarlok",true);
+      // lokalis szerver:
+      //xmlhttp.open("GET","https://localhost:7032/api/cafeum/vasarlok",true);
 
+      // online szerver:
+      xmlhttp.open("GET","https://api-20nv4395y20947yv5n2y4v02y3v20n43v5273vy-ngrok-dev.eu.ngrok.io/api/cafeum/vasarlok",true);
+      xmlhttp.setRequestHeader("ngrok-skip-browser-warning", "1");
 
-		  //xmlhttp.open("GET","https://vulture-golden-willingly.ngrok-free.app/api/cafeum/vasarlok",true);
-      //xmlhttp.open("GET","https://3d1e-80-99-39-238.ngrok-free.app/api/cafeum/vasarlok",true);
-		  //xmlhttp.setRequestHeader("ngrok-skip-browser-warning",true);
-		  //xmlhttp.setRequestHeader("ngrok-skip-browser-warning", "1");
-
-          xmlhttp.send();
+      xmlhttp.send();
         }
     </script>
 

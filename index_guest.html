@@ -46,7 +46,7 @@
             <!--<a href="index_guest.html" class="navbar-brand">
                   <img src="img/kv-logo.png" alt="Logo">
               </a>-->
-              <a onclick="switcher('index_guest.html',vasarloId)" class="navbar-brand">
+              <a onclick="switcher('index_guest.html')" class="navbar-brand">
                 <img src="img/kv-logo.png" alt="Logo"  class="navbar-image">
             </a>
               <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -54,13 +54,13 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarCollapse">
                   <div class="navbar-nav ms-auto">
-                      <a onclick="switcher('index_guest.html',vasarloId)" class="nav-item nav-link active">Főoldal</a>
-                      <a onclick="switcher('about_guest.html',vasarloId)" class="nav-item nav-link">Bemutatkozás</a>
+                      <a onclick="switcher('index_guest.html')" class="nav-item nav-link active">Főoldal</a>
+                      <a onclick="switcher('about_guest.html')" class="nav-item nav-link">Bemutatkozás</a>
                       <!--<a href="store_guest.html" class="nav-item nav-link">Kávék</a>
                       <a href="dessert_guest.html" class="nav-item nav-link">Desszertek</a>
                       <a href="store_guest.html" class="nav-item nav-link">Termékek</a>-->
-                      <a onclick="switcher('store_guest.html',vasarloId)" class="nav-item nav-link">Termékek</a>
-                      <a onclick="switcher('contact_guest.html',vasarloId)" class="nav-item nav-link">Kapcsolat</a>
+                      <a onclick="switcher('store_guest.html')" class="nav-item nav-link">Termékek</a>
+                      <a onclick="switcher('contact_guest.html')" class="nav-item nav-link">Kapcsolat</a>
                       <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Kosár</a>
                         <div class="dropdown-menu bg-light rounded-0">
@@ -93,7 +93,7 @@
                                 <div class="col-lg-7 text-center">
                                     <p class="fs-4 text-white animated zoomIn cleanshadow">Üdvözlünk</strong></p>
                                     <h1 class="display-1 text-white mb-4 animated zoomIn cleanshadow">A Cafeum oldalán <span id="vasarloNev"></span>!</h1>
-                                    <a href="store_guest.html" class="btn btn-light rounded-pill py-3 px-5 animated zoomIn">Tovább a termékeinkre!</a>
+                                    <a onclick="switcher('store_guest.html')" class="btn btn-light rounded-pill py-3 px-5 animated zoomIn">Tovább a termékeinkre!</a>
                                 </div>
                             </div>
                         </div>

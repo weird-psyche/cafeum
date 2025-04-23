@@ -75,14 +75,16 @@ function RendelesLeadas() {
 			console.log("Hiba a POST keres soran: "+xmlhttp.status);
 		}
 	};
-  xmlhttp.open("POST","https://localhost:7032/api/cafeum/rendelesek", true);
-  //xmlhttp.open("POST", "https://7e2c-80-99-39-238.ngrok-free.app/api/cafeum/rendelesek", true);
-  xmlhttp.setRequestHeader("Content-Type","application/json");
+      // lokalis szerver:
+      //xmlhttp.open("POST","https://localhost:7032/api/cafeum/rendelesek",true);
+      //xmlhttp.setRequestHeader("Content-Type", "application/json");
 
-  //if(kosar[1] != null) xmlhttp.send(JSON.stringify(kosar[0]));
-  //else xmlhttp.send(JSON.stringify(kosar));
+      // online szerver:
+      xmlhttp.open("POST","https://api-20nv4395y20947yv5n2y4v02y3v20n43v5273vy-ngrok-dev.eu.ngrok.io/api/cafeum/rendelesek",true);
+      xmlhttp.setRequestHeader("Content-Type", "application/json");
+      xmlhttp.setRequestHeader("ngrok-skip-browser-warning", "1");
 
-  xmlhttp.send(JSON.stringify(kosar));
+      xmlhttp.send(JSON.stringify(kosar));
   kosar=[];
   let szoveg="<p>Sikeres rendelés!</p>"
   szoveg+="<button class='btn btn-dark py-2 px-2 m-2' onclick='RendelesKesz();'>Ok!</button>";
@@ -106,9 +108,14 @@ function RendelesKesz() {
     }
   }
 
-  xmlhttp2.open("GET","https://localhost:7032/api/cafeum/rendelesek",true);
-  //xmlhttp2.open("GET","https://7e2c-80-99-39-238.ngrok-free.app/api/cafeum/rendelesek", true);
-  xmlhttp2.send();
+  // lokalis szerver:
+      //xmlhttp2.open("GET","https://localhost:7032/api/cafeum/rendelesek",true);
+
+      // online szerver:
+      xmlhttp2.open("GET","https://api-20nv4395y20947yv5n2y4v02y3v20n43v5273vy-ngrok-dev.eu.ngrok.io/api/cafeum/rendelesek",true);
+      xmlhttp2.setRequestHeader("ngrok-skip-browser-warning", "1");
+
+      xmlhttp2.send();
   document.getElementById("tablakint").innerHTML="Üres";
 }
 
@@ -131,9 +138,14 @@ window.onload = function () {
       //document.getElementById("tablakint").innerHTML=tab;
     }
   }
-  xmlhttp.open("GET","https://localhost:7032/api/cafeum/termek",true);
-  //xmlhttp.open("GET","https://7e2c-80-99-39-238.ngrok-free.app/api/cafeum/termek",true);
-  xmlhttp.send();
+      // lokalis szerver:
+      //xmlhttp.open("GET","https://localhost:7032/api/cafeum/termek",true);
+
+      // online szerver:
+      xmlhttp.open("GET","https://api-20nv4395y20947yv5n2y4v02y3v20n43v5273vy-ngrok-dev.eu.ngrok.io/api/cafeum/termek",true);
+      xmlhttp.setRequestHeader("ngrok-skip-browser-warning", "1");
+
+      xmlhttp.send();
 
 
   const xmlhttp2 = new XMLHttpRequest();
@@ -152,9 +164,14 @@ window.onload = function () {
     }
   }
 
-  xmlhttp2.open("GET","https://localhost:7032/api/cafeum/rendelesek",true);
-  //xmlhttp2.open("GET","https://7e2c-80-99-39-238.ngrok-free.app/api/cafeum/rendelesek",true);
-  xmlhttp2.send();
+      // lokalis szerver:
+      //xmlhttp2.open("GET","https://localhost:7032/api/cafeum/rendelesek",true);
+
+      // online szerver:
+      xmlhttp2.open("GET","https://api-20nv4395y20947yv5n2y4v02y3v20n43v5273vy-ngrok-dev.eu.ngrok.io/api/cafeum/rendelesek",true);
+      xmlhttp2.setRequestHeader("ngrok-skip-browser-warning", "1");
+
+      xmlhttp2.send();
 
   document.getElementById('tablakint').innerHTML="<tbody><tr>Üres<tr></tbody>"
 }

@@ -97,7 +97,13 @@
             document.getElementById("show_data").innerHTML=szoveg;
           }
         }
-      xmlhttp.open("GET","https://localhost:7032/api/cafeum/vasarlok",true);
+      // lokalis szerver:
+      //xmlhttp.open("GET","https://localhost:7032/api/cafeum/vasarlok",true);
+
+      // online szerver:
+      xmlhttp.open("GET","https://api-20nv4395y20947yv5n2y4v02y3v20n43v5273vy-ngrok-dev.eu.ngrok.io/api/cafeum/vasarlok",true);
+      xmlhttp.setRequestHeader("ngrok-skip-browser-warning", "1");
+
       xmlhttp.send();
     }
     </script>

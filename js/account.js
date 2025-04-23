@@ -2,7 +2,7 @@
 
 
 
-  console.log(location.search);
+  //console.log(location.search);
   let vasarloId=location.search;
   // -- ki kell szedni az osszeset -- document.getElementById("vasarloid").innerHTML=vasarloId;
 

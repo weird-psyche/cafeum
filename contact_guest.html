@@ -46,7 +46,7 @@
             <!--<a href="index_guest.html" class="navbar-brand">
                   <img src="img/kv-logo.png" alt="Logo">
               </a>-->
-              <a onclick="switcher('index_guest.html',vasarloId)" class="navbar-brand">
+              <a onclick="switcher('index_guest.html')" class="navbar-brand">
                 <img src="img/kv-logo.png" alt="Logo"  class="navbar-image">
             </a>
               <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -54,13 +54,13 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarCollapse">
                   <div class="navbar-nav ms-auto">
-                      <a onclick="switcher('index_guest.html',vasarloId)" class="nav-item nav-link active">Főoldal</a>
-                      <a onclick="switcher('about_guest.html',vasarloId)" class="nav-item nav-link">Bemutatkozás</a>
+                      <a onclick="switcher('index_guest.html')" class="nav-item nav-link active">Főoldal</a>
+                      <a onclick="switcher('about_guest.html')" class="nav-item nav-link">Bemutatkozás</a>
                       <!--<a href="store_guest.html" class="nav-item nav-link">Kávék</a>
                       <a href="dessert_guest.html" class="nav-item nav-link">Desszertek</a>
                       <a href="store_guest.html" class="nav-item nav-link">Termékek</a>-->
-                      <a onclick="switcher('store_guest.html',vasarloId)" class="nav-item nav-link">Termékek</a>
-                      <a onclick="switcher('contact_guest.html',vasarloId)" class="nav-item nav-link">Kapcsolat</a>
+                      <a onclick="switcher('store_guest.html')" class="nav-item nav-link">Termékek</a>
+                      <a onclick="switcher('contact_guest.html')" class="nav-item nav-link">Kapcsolat</a>
                       <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Kosár</a>
                         <div class="dropdown-menu bg-light rounded-0">
@@ -110,30 +110,30 @@
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                                <input type="text" class="form-control" id="name" name="name">
                                 <label for="name">Név</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                <input type="email" class="form-control" id="email" name="email">
                                 <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                <input type="text" class="form-control" id="subject" name="subject">
                                 <label for="subject">Téma</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 120px"></textarea>
+                                <textarea class="form-control" id="message" name="message" style="height: 120px"></textarea>
                                 <label for="message">Üzenet</label>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary rounded-pill py-3 px-5" type="submit" onclick="KontaktKuldes();">Küldés</button>
+                            <button class="btn btn-primary rounded-pill py-3 px-5" onclick="KontaktKuldes();">Küldés</button>
                         </div>
                     </div>
                 </form>
@@ -194,11 +194,17 @@
         }
       };
 
-      xmlhttp.open("POST","https://localhost:7032/api/cafeum/kontakt",true);
+      // lokalis szerver:
+      //xmlhttp.open("POST","https://localhost:7032/api/cafeum/kontakt",true);
+      //xmlhttp.setRequestHeader("Content-Type", "application/json");
+
+      // online szerver:
+      xmlhttp.open("POST","https://api-20nv4395y20947yv5n2y4v02y3v20n43v5273vy-ngrok-dev.eu.ngrok.io/api/cafeum/kontakt",true);
       xmlhttp.setRequestHeader("Content-Type", "application/json");
+      xmlhttp.setRequestHeader("ngrok-skip-browser-warning", "1");
 
       xmlhttp.send(JSON.stringify(formData));
-      alert("Sikeres kuldes");
+      alert("Sikeres küldés!");
     }
   </script>
 

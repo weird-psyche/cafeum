@@ -52,7 +52,7 @@
         else{
         const logindiv = document.getElementById("LoginForm");
         const DivData = {
-          vasarloId: getId,
+          //vasarloId: getId,
           vasarloNev: logindiv.VezNev.value+" "+logindiv.KerNev.value,
           vasarloMail: logindiv.Email.value,
           vasarloJelszo: logindiv.Password.value,
@@ -69,9 +69,14 @@
 			    console.log("Hiba a POST keres soran: "+xmlhttp.status);
 		    }
 	    };
-      xmlhttp.open("POST","https://localhost:7032/api/cafeum/vasarlok", true);
-      //xmlhttp.open("POST","https://7e2c-80-99-39-238.ngrok-free.app/api/cafeum/vasarlok", true)
-      xmlhttp.setRequestHeader("Content-Type","application/json");
+      // lokalis szerver:
+      //xmlhttp.open("POST","https://localhost:7032/api/cafeum/vasarlok",true);
+      //xmlhttp.setRequestHeader("Content-Type", "application/json");
+
+      // online szerver:
+      xmlhttp.open("POST","https://api-20nv4395y20947yv5n2y4v02y3v20n43v5273vy-ngrok-dev.eu.ngrok.io/api/cafeum/vasarlok",true);
+      xmlhttp.setRequestHeader("Content-Type", "application/json");
+      xmlhttp.setRequestHeader("ngrok-skip-browser-warning", "1");
 
       xmlhttp.send(JSON.stringify(DivData));
 
@@ -81,6 +86,7 @@
       //  alert("Sikeres regisztracio");
     }
     }
+    /*
     let getId=0;
     window.onload = function () {
       const xmlhttp = new XMLHttpRequest();
@@ -99,10 +105,16 @@
         }
       }
 
-      xmlhttp.open("GET","https://localhost:7032/api/cafeum/vasarlok",true);
-      //xmlhttp.open("GET","https://7e2c-80-99-39-238.ngrok-free.app/api/cafeum/rendelesek", true);
+      // lokalis szerver:
+      //xmlhttp.open("GET","https://localhost:7032/api/cafeum/vasarlok",true);
+
+      // online szerver:
+      xmlhttp.open("GET","https://api-20nv4395y20947yv5n2y4v02y3v20n43v5273vy-ngrok-dev.eu.ngrok.io/api/cafeum/vasarlok",true);
+      xmlhttp.setRequestHeader("ngrok-skip-browser-warning", "1");
+
       xmlhttp.send();
     }
+      */
     </script>
 </body>
 </html>
