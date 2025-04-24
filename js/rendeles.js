@@ -7,7 +7,7 @@ else if (!isNaN(location.search[1]) && !isNaN(location.search[2]) && isNaN(locat
 else if (!isNaN(location.search[1]) && !isNaN(location.search[2]) && !isNaN(location.search[3]) && isNaN(location.search[4])) felhasznalo=location.search[1]+location.search[2]+location.search[1]+location.search[3];
 let kvneve="";
 function Kosarba(kvid) {
-  alert(felhasznalo);
+  //alert(felhasznalo);
   const data = {
     termekId: kvid,
     vasarloId: felhasznalo*1,
