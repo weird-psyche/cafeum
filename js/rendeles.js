@@ -1,10 +1,13 @@
 let kosar = [];
 let termektabla = [];
 let rendelesszam=0;
-let felhasznalo=location.search[1];
+let felhasznalo=0;
+if(!isNaN(location.search[1]) && isNaN(location.search[2])) felhasznalo=location.search[1];
+else if (!isNaN(location.search[1]) && !isNaN(location.search[2]) && isNaN(location.search[3])) felhasznalo=location.search[1]+location.search[2];
+else if (!isNaN(location.search[1]) && !isNaN(location.search[2]) && !isNaN(location.search[3]) && isNaN(location.search[4])) felhasznalo=location.search[1]+location.search[2]+location.search[1]+location.search[3];
 let kvneve="";
 function Kosarba(kvid) {
-  //alert(felhasznalo);
+  alert(felhasznalo);
   const data = {
     termekId: kvid,
     vasarloId: felhasznalo*1,
@@ -13,20 +16,6 @@ function Kosarba(kvid) {
   };
   kosar.push(data);
   console.log(kosar);
-  /*
-  let szoveg="<ul>";
-  let kvneve="";
-  for(let i=0;i<kosar.length;i++)
-  {
-    szoveg+="<li>"
-    for(let j=0;j<termektabla.length;j++)
-    {
-      if(kosar[i].termekId == termektabla[j].termekId) kvneve=termektabla[j].termekNev;
-    }
-    szoveg+=kvneve+"</li>";
-  }
-  szoveg+="</ul>";
-  */
 
   let szoveg="<tbody>"
   for(let i=0;i<kosar.length;i++)
