@@ -4,7 +4,7 @@ function AccountCreate() {
   let Pwd2 = document.getElementById('Password2').value;
   let Lakcim = document.getElementById('Location').value;
 
-  if(Pwd1 != Pwd2) document.getElementById('BadPwd').innerHTML="ELTERO JELSZO";
+  if(Pwd1 != Pwd2) document.getElementById('BadPwd').innerHTML="Eltérő jelszó!";
   else{
   const logindiv = document.getElementById("LoginForm");
   const DivData = {
