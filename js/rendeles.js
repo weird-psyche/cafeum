@@ -41,13 +41,28 @@ function Kosarba(kvid) {
   szoveg+="<p>Végösszeg: "+vegosszeg+"Ft</p>";
   szoveg+="<button class='btn btn-dark py-2 px-2 m-2' onclick='RendelesLeadas()'>Rendelés leadása</button>";
   document.getElementById("tablakint").innerHTML=szoveg;
-  Swal.fire({
+  /*Swal.fire({
     width: '16rem',
     title: 'Kosárba',
     icon: 'success',
     timer: 1150,
     showConfirmButton: false,
-  });
+  });*/
+  const Toast = Swal.mixin({
+  toast: true,
+  position: "top-end",
+  showConfirmButton: false,
+  timer: 2000,
+  timerProgressBar: true,
+  didOpen: (toast) => {
+    toast.onmouseenter = Swal.stopTimer;
+    toast.onmouseleave = Swal.resumeTimer;
+  }
+});
+Toast.fire({
+  icon: "success",
+  title: "Kosárba helyezve!"
+});
 
 }
 
