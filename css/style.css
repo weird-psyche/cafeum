@@ -17,7 +17,14 @@
 
 }
 
-#server-status {
+.btn-x {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.server-status {
   color: red;
   font-weight: bold;
   background-color: black;
@@ -32,7 +39,7 @@
     font-weight: 600;
 }
 
-.fw-bold {  
+.fw-bold {
     font-weight: 700;
 }
 
@@ -111,6 +118,7 @@
     width: 20px;
     height: 20px;
     background-color: red;
+    border-radius: 8px;
 }
 
 
@@ -169,7 +177,7 @@
     }
 }
 
-@media (min-width: 992px) {
+  @media (min-width: 992px) {
     .navbar .nav-item .dropdown-menu {
         display: block;
         border: none;

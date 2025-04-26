@@ -2,6 +2,7 @@ let kosar = [];
 let termektabla = [];
 let rendelesszam=0;
 let felhasznalo=0;
+let vegosszeg=0;
 if(!isNaN(location.search[1]) && isNaN(location.search[2])) felhasznalo=location.search[1];
 else if (!isNaN(location.search[1]) && !isNaN(location.search[2]) && isNaN(location.search[3])) felhasznalo=location.search[1]+location.search[2];
 else if (!isNaN(location.search[1]) && !isNaN(location.search[2]) && !isNaN(location.search[3]) && isNaN(location.search[4])) felhasznalo=location.search[1]+location.search[2]+location.search[1]+location.search[3];
@@ -18,39 +19,65 @@ function Kosarba(kvid) {
   console.log(kosar);
 
   let szoveg="<tbody>"
+  let j=0;
   for(let i=0;i<kosar.length;i++)
     {
-      szoveg+="<tr><td>"
-      for(let j=0;j<termektabla.length;j++)
+      szoveg+="<tr style='text-align: left;'><td>"
+      for(j=0;j<termektabla.length;j++)
       {
-        if(kosar[i].termekId == termektabla[j].termekId) kvneve=termektabla[j].termekNev;
+        if(kosar[i].termekId == termektabla[j].termekId){
+          kvneve=termektabla[j].termekNev;
+          break;
+        }
       }
-      szoveg+="<button class='btn_delete' onclick='RendelesKi("+i+");'></button>"
-      szoveg+="<p>"+kvneve+"</p></td></tr>";
+
+      //szoveg+="<button class='btn btn-dark rounded-pill btn-x' onclick='RendelesKi("+i+");'><img src='img/btn-x.png'></img></button>";
+      szoveg+="<img src='img/btn-x.png' onclick='RendelesKi("+i+")' class='btn-dark btn-x'></img>"
+      szoveg+=kvneve+"<br> - "+termektabla[j].termekAr+"Ft";
+      szoveg+="</td></tr>";
     }
-  szoveg+="</tbody>"
+  vegosszeg+=termektabla[j].termekAr*1;
+  szoveg+="</tbody>";
+  szoveg+="<p>Végösszeg: "+vegosszeg+"Ft</p>";
   szoveg+="<button class='btn btn-dark py-2 px-2 m-2' onclick='RendelesLeadas()'>Rendelés leadása</button>";
   document.getElementById("tablakint").innerHTML=szoveg;
 }
 
 function RendelesKi(index) {
   //alert("gyasz");
+  let j=0;
   for(let i=0;i<kosar.length;i++)
   {
-    if(kosar[index]==kosar[i]) kosar.splice(index,1);
+    if(kosar[index]==kosar[i]){
+      for(j=0;j<termektabla.length;j++)
+        {
+          if(kosar[index].termekId == termektabla[j].termekId){
+            vegosszeg-=termektabla[j].termekAr*1;
+            break;
+          }
+        }
+      kosar.splice(index,1);
+      break;
+    }
   }
   let szoveg="<tbody>"
   for(let i=0;i<kosar.length;i++)
     {
-      szoveg+="<tr><td>"
-      for(let j=0;j<termektabla.length;j++)
+      szoveg+="<tr style='text-align: left;'><td>"
+      for(j=0;j<termektabla.length;j++)
       {
-        if(kosar[i].termekId == termektabla[j].termekId) kvneve=termektabla[j].termekNev;
+        if(kosar[i].termekId == termektabla[j].termekId){
+          kvneve=termektabla[j].termekNev;
+          break;
+        }
       }
-      szoveg+="<button class='btn_delete' onclick='RendelesKi("+i+");'></button>"
-      szoveg+="<p>"+kvneve+"</p></td></tr>";
+      //szoveg+="<button class='btn_delete' onclick='RendelesKi("+i+");'></button>"
+      szoveg+="<img src='img/btn-x.png' onclick='RendelesKi("+i+")' class='btn-dark btn-x'></img>"
+      szoveg+=kvneve+"<br> - "+termektabla[j].termekAr+"Ft</td></tr>";
     }
+
   szoveg+="</tbody>"
+  szoveg+="<p>Végösszeg: "+vegosszeg+"Ft</p>";
   szoveg+="<button class='btn btn-dark py-2 px-2 m-2' onclick='RendelesLeadas()'>Rendelés leadása</button>";
   document.getElementById("tablakint").innerHTML=szoveg;
 }
@@ -118,13 +145,6 @@ window.onload = function () {
       {
         termektabla.push(object[i]);
       }
-      //console.log(termektabla[0].termekId)
-      /*let tab="<table class='table table-stripped>'"
-      for(let i=0;i<object.length;i++){
-        tab+="<tr><td>"+object[i].termekNev+"</td><td>"+object[i].termekAr+"</td></tr>";
-      }
-      tab+="</table>";*/
-      //document.getElementById("tablakint").innerHTML=tab;
     }
   }
       // lokalis szerver:
