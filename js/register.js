@@ -4,7 +4,15 @@ function AccountCreate() {
   let Pwd2 = document.getElementById('Password2').value;
   let Lakcim = document.getElementById('Location').value;
 
-  if(Pwd1 != Pwd2) document.getElementById('BadPwd').innerHTML="Eltérő jelszó!";
+  if(Pwd1 != Pwd2){
+    //document.getElementById('BadPwd').innerHTML="<p style='text-align:center; color:red;'>ELTÉRŐ JELSZÓ</p>";
+    Swal.fire({
+      width: '16rem',
+      title: 'Eltérő jelszavak!',
+      icon: 'warning',
+      confirmButtonColor: '#1e2326',
+    });
+  }
   else{
   const logindiv = document.getElementById("LoginForm");
   const DivData = {
@@ -36,7 +44,7 @@ xmlhttp.setRequestHeader("ngrok-skip-browser-warning", "1");
 
 xmlhttp.send(JSON.stringify(DivData));
 
-alert("Sikeres regisztracio");
+//alert("Sikeres regisztracio");
 location.assign("login.html");
 }
 }

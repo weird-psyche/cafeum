@@ -32,7 +32,7 @@ function Kosarba(kvid) {
       }
 
       //szoveg+="<button class='btn btn-dark rounded-pill btn-x' onclick='RendelesKi("+i+");'><img src='img/btn-x.png'></img></button>";
-      szoveg+="<img src='img/btn-x.png' onclick='RendelesKi("+i+")' class='btn-dark btn-x'></img>"
+      szoveg+="<img src='img/btn-x.png' onclick='RendelesKi("+i+")' class='btn-dark btn-x'></img>";
       szoveg+=kvneve+"<br> - "+termektabla[j].termekAr+"Ft";
       szoveg+="</td></tr>";
     }
@@ -41,6 +41,14 @@ function Kosarba(kvid) {
   szoveg+="<p>Végösszeg: "+vegosszeg+"Ft</p>";
   szoveg+="<button class='btn btn-dark py-2 px-2 m-2' onclick='RendelesLeadas()'>Rendelés leadása</button>";
   document.getElementById("tablakint").innerHTML=szoveg;
+  Swal.fire({
+    width: '16rem',
+    title: 'Kosárba',
+    icon: 'success',
+    timer: 1150,
+    showConfirmButton: false,
+  });
+
 }
 
 function RendelesKi(index) {
@@ -102,9 +110,15 @@ function RendelesLeadas() {
 
       xmlhttp.send(JSON.stringify(kosar));
   kosar=[];
-  let szoveg="<p>Sikeres rendelés!</p>"
-  szoveg+="<button class='btn btn-dark py-2 px-2 m-2' onclick='RendelesKesz();'>Ok!</button>";
-  document.getElementById("tablakint").innerHTML=szoveg;
+  //let szoveg="<p>Sikeres rendelés!</p>"
+  //szoveg+="<button class='btn btn-dark py-2 px-2 m-2' onclick='RendelesKesz();'>Ok!</button>";
+  Swal.fire({
+    width: '16rem',
+    title: 'Sikeres rendelés',
+    icon: 'success',
+    confirmButtonColor: '#1e2326',
+  });
+  document.getElementById("tablakint").innerHTML="Üres";
 }
 
 function RendelesKesz() {

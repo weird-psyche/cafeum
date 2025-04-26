@@ -4,6 +4,7 @@ function AccountCheck() {
   let talalt=false;
   let MailIndex=0;
 
+
   if(Mail == "admin-panel" && Pwd == "admincafeum"){
     alert("Sikeres bejelentkezes ADMIN");
     location.assign("admin.html");
@@ -24,15 +25,27 @@ function AccountCheck() {
       }
       if(talalt){
         if(Mail == object[MailIndex].vasarloMail && Pwd == object[MailIndex].vasarloJelszo){
-          alert("Sikeres bejelentkezes");
+          //alert("Sikeres bejelentkezes");
           location.assign("index_guest.html?"+object[MailIndex].vasarloId);
         } else {
           //document.getElementById('BadCode').innerHTML="Hibas email vagy jelszo!";
-          alert("Hibas email vagy jelszo!");
+          //alert("Hibas email vagy jelszo!");
+          Swal.fire({
+            width: '16rem',
+            title: 'Hibás email vagy jelszó!',
+            icon: 'error',
+            confirmButtonColor: '#1e2326',
+          });
         }
       } else {
         //document.getElementById('BadCode').innerHTML="Fiok nem letezik!";
-        alert("Fiok nem letezik!");
+        //alert("Fiok nem letezik!");
+        Swal.fire({
+          width: '16rem',
+          title: 'Fiók nem létezik!',
+          icon: 'error',
+          confirmButtonColor: '#1e2326',
+        });
       }
     }
   }
