@@ -44,7 +44,7 @@ xmlhttp.setRequestHeader("ngrok-skip-browser-warning", "1");
 
 xmlhttp.send(JSON.stringify(DivData));
 
-//alert("Sikeres regisztracio");
+alert("Sikeres regisztráció!");
 location.assign("login.html");
 }
 }
