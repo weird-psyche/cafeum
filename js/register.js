@@ -6,12 +6,12 @@ function AccountCreate() {
 
   if(Pwd1 != Pwd2){
     document.getElementById('BadPwd').innerHTML="<p style='text-align:center; color:red;'>ELTÉRŐ JELSZÓ</p>";
-    /*Swal.fire({
+    Swal.fire({
       width: '16rem',
       title: 'Eltérő jelszavak!',
       icon: 'warning',
       confirmButtonColor: '#1e2326',
-    });*/
+    });
   }
   else{
   const logindiv = document.getElementById("LoginForm");
