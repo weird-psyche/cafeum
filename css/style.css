@@ -1,4 +1,3 @@
-/********** Template CSS **********/
 :root {
     --primary: rgba(24, 26, 27,0.5);
     --secondary: rgb(116, 83, 49);
@@ -15,6 +14,11 @@
     --boxhatter2:rgb(116, 83, 49);
     --alahuzas:rgb(120, 115, 20);
 
+}
+
+.scroll-div {
+  overflow-y: auto;
+  max-height: 400px;
 }
 
 .btn-x {
