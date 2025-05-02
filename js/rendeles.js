@@ -1,22 +1,26 @@
 let kosar = [];
 let termektabla = [];
 let rendelesszam=0;
-let felhasznalo=0;
 let vegosszeg=0;
+let felhasznalo=localStorage.getItem("vasarloId")*1;
+/*
+let felhasznalo=0;
 if(!isNaN(location.search[1]) && isNaN(location.search[2])) felhasznalo=location.search[1];
 else if (!isNaN(location.search[1]) && !isNaN(location.search[2]) && isNaN(location.search[3])) felhasznalo=location.search[1]+location.search[2];
 else if (!isNaN(location.search[1]) && !isNaN(location.search[2]) && !isNaN(location.search[3]) && isNaN(location.search[4])) felhasznalo=location.search[1]+location.search[2]+location.search[1]+location.search[3];
+*/
 let kvneve="";
 function Kosarba(kvid) {
   //alert(felhasznalo);
   const data = {
     termekId: kvid,
-    vasarloId: felhasznalo*1,
+    //vasarloId: felhasznalo*1,
+    vasarloId: felhasznalo,
     rendelesszam: rendelesszam,
-    mennyiseg: 1,
+    //mennyiseg: 1,
   };
   kosar.push(data);
-  console.log(kosar);
+  //console.log(kosar);
 
   let szoveg="<tbody>"
   let j=0;
@@ -52,7 +56,7 @@ function Kosarba(kvid) {
   toast: true,
   position: "top",
   showConfirmButton: false,
-  timer: 2000,
+  timer: 1200,
   timerProgressBar: true,
   didOpen: (toast) => {
     toast.onmouseenter = Swal.stopTimer;
@@ -67,7 +71,6 @@ Toast.fire({
 }
 
 function RendelesKi(index) {
-  //alert("gyasz");
   let j=0;
   for(let i=0;i<kosar.length;i++)
   {

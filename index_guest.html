@@ -46,21 +46,21 @@
             <!--<a href="index_guest.html" class="navbar-brand">
                   <img src="img/kv-logo.png" alt="Logo">
               </a>-->
-              <a onclick="switcher('index_guest.html',vasarloId)" class="navbar-brand">
-                <img src="img/kv-logo.png" alt="Logo"  class="navbar-image">
+              <a href="index_guest.html" class="navbar-brand">
+                <img src="img/kv-logo.png" alt="Logo" class="navbar-image">
             </a>
               <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                   <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarCollapse">
                   <div class="navbar-nav ms-auto">
-                      <a onclick="switcher('index_guest.html')" class="nav-item nav-link active">Főoldal</a>
-                      <a onclick="switcher('about_guest.html')" class="nav-item nav-link">Bemutatkozás</a>
+                      <a href="index_guest.html" class="nav-item nav-link active">Főoldal</a>
+                      <a href="about_guest.html" class="nav-item nav-link">Bemutatkozás</a>
                       <!--<a href="store_guest.html" class="nav-item nav-link">Kávék</a>
                       <a href="dessert_guest.html" class="nav-item nav-link">Desszertek</a>
                       <a href="store_guest.html" class="nav-item nav-link">Termékek</a>-->
-                      <a onclick="switcher('store_guest.html')" class="nav-item nav-link">Termékek</a>
-                      <a onclick="switcher('contact_guest.html')" class="nav-item nav-link">Kapcsolat</a>
+                      <a href="store_guest.html" class="nav-item nav-link">Termékek</a>
+                      <a href="contact_guest.html" class="nav-item nav-link">Kapcsolat</a>
                       <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Kosár</a>
                         <div class="dropdown-menu bg-light rounded-0">
@@ -70,7 +70,7 @@
                       <div class="nav-item dropdown">
                           <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Fiók</a>
                           <div class="dropdown-menu bg-light rounded-0 m-0">
-                              <a href="index.html" class="dropdown-item">Kilépés</a>
+                              <a href="index.html" class="dropdown-item" onclick="localStorage.clear();">Kilépés</a>
                           </div>
                       </div>
                   </div>
@@ -94,7 +94,7 @@
                                   <h3><span class="server-status" id="server-status"></span></h3>
                                     <p class="fs-4 text-white animated zoomIn cleanshadow">Üdvözlünk</strong></p>
                                     <h1 class="display-1 text-white mb-4 animated zoomIn cleanshadow">A Cafeum oldalán <span id="vasarloNev"></span>!</h1>
-                                    <a onclick="switcher('store_guest.html')" class="btn btn-light rounded-pill py-3 px-5 animated zoomIn">Tovább a termékeinkre!</a>
+                                    <a href="store_guest.html" class="btn btn-light rounded-pill py-3 px-5 animated zoomIn">Tovább a termékeinkre!</a>
                                 </div>
                             </div>
                         </div>
@@ -160,28 +160,28 @@
                 <h1 class="display-6">Felkapott ételeink</h1>
             </div>
             <div class="owl-carousel product-carousel wow fadeInUp" data-wow-delay="0.5s">
-                <a onclick="switcher2('store_guest.html')" class="d-block product-item rounded">
+                <a href="store_guest.html#torta" class="d-block product-item rounded">
                     <img src="img/sut1.jpg" alt="">
                     <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
-                        <h4 class="text-dark">Torta della nonna</h4>
-                        <span class="text-body">Igazi ízletes olasz süteménykülönlegesség</span>
+                        <h4 class="text-dark">New York sajttorta</h4>
+                        <span class="text-body">Krémes, ínycsiklandozó sajttorta</span>
                     </div>
                 </a>
-                <a onclick="switcher2('store_guest.html')" class="d-block product-item rounded">
+                <a href="store_guest.html#pite" class="d-block product-item rounded">
                     <img src="img/sut2.jpg" alt="">
                     <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
                         <h4 class="text-dark">Almás pite</h4>
                         <span class="text-body">Omlós, frissen sült almáspite</span>
                     </div>
                 </a>
-                <a onclick="switcher2('store_guest.html')" class="d-block product-item rounded">
+                <a href="store_guest.html#croissant" class="d-block product-item rounded">
                     <img src="img/sut3.jpg" alt="">
                     <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
                         <h4 class="text-dark">Croissant</h4>
                         <span class="text-body">Friss, vajjal omlós croissant</span>
                     </div>
                 </a>
-                <a onclick="switcher2('store_guest.html')" class="d-block product-item rounded">
+                <a href="store_guest.html#bagel" class="d-block product-item rounded">
                     <img src="img/sut4.jpg" alt="">
                     <div class="bg-white shadow-sm text-center p-4 position-relative mt-n5 mx-4">
                         <h4 class="text-dark">Bagel</h4>
@@ -243,7 +243,7 @@
                     </div>
                 </div>
                 <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <a onclick="switcher('store_guest')" class="btn btn-primary rounded-pill py-3 px-5">Tekintse meg a többi terméket</a>
+                    <a href="store_guest.html" class="btn btn-dark rounded-pill py-3 px-5">Tekintse meg a többi terméket</a>
                 </div>
             </div>
         </div>

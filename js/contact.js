@@ -27,6 +27,9 @@ xmlhttp.open("POST","https://api-20nv4395y20947yv5n2y4v02y3v20n43v5273vy-ngrok-d
 xmlhttp.setRequestHeader("Content-Type", "application/json");
 xmlhttp.setRequestHeader("ngrok-skip-browser-warning", "1");
 
+
+
 xmlhttp.send(JSON.stringify(formData));
-alert("Sikeres küldés!");
+
+//alert("Sikeres küldés!");
 }

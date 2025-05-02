@@ -26,7 +26,10 @@ function AccountCheck() {
       if(talalt){
         if(Mail == object[MailIndex].vasarloMail && Pwd == object[MailIndex].vasarloJelszo){
           //alert("Sikeres bejelentkezes");
-          location.assign("index_guest.html?"+object[MailIndex].vasarloId);
+          //location.assign("index_guest.html?"+object[MailIndex].vasarloId);
+          localStorage.setItem("vasarloId", object[MailIndex].vasarloId);
+          localStorage.setItem("vasarloNev", object[MailIndex].vasarloNev);
+          location.assign("index_guest.html");
         } else {
           //document.getElementById('BadCode').innerHTML="Hibas email vagy jelszo!";
           //alert("Hibas email vagy jelszo!");
